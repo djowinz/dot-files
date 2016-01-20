@@ -40,8 +40,8 @@ alias glab='gitlab '
 alias sudo='sudo '
 alias refresh='source ~/.zshrc'
 alias activex_zeus='ssh root@10.119.42.225'
-alias activex_apollo='sshpass -p "^NBd&i2Wqazp.dNqm]d9x" ssh verys@10.119.159.166'
-alias activex_hera='sshpass -p "^NBd&i2Wqazp.dNqm]d9x" ssh verys@10.119.159.167'
+alias activex_apollo='sshpass -p "" ssh verys@10.119.159.166'
+alias activex_hera='sshpass -p "" ssh verys@10.119.159.167'
 alias r='rails'
 
 # Composer Aliases

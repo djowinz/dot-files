@@ -1,0 +1,46 @@
+"*":
+  "atom-autocomplete-php":
+    autoloadPaths: [
+      "vendor/autoload.php"
+    ]
+    binPhp: "/usr/bin/php"
+    insertNewlinesForUseStatements: true
+    verboseErrors: true
+  "autocomplete-php":
+    executablePath: "/usr/bin/php"
+  core:
+    disabledPackages: [
+      "tree-view"
+    ]
+  editor:
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+    tabType: "hard"
+  "exception-reporting":
+    userId: "7ba0f335-20c8-08d9-2c43-5939f8abb405"
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
+  "linter-eslint":
+    disableWhenNoEslintConfig: false
+    globalNodePath: "/usr/local"
+    useGlobalEslint: true
+  "linter-haml":
+    hamlLintExecutablePath: "/Users/djowinz/.rvm/gems/ruby-2.2.3/bin/haml-lint"
+  "linter-php":
+    executablePath: "/usr/bin/php"
+  "linter-scss-lint":
+    executablePath: "/Users/djowinz/.rvm/gems/ruby-2.2.3/wrappers/scss-lint"
+  nuclide:
+    "nuclide-home":
+      showHome: false
+  "tabs-to-spaces":
+    onSave: "untabify"
+  "terminal-plus":
+    core: {}
+    style:
+      theme: "homebrew"
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false

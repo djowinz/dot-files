@@ -1,3 +1,6 @@
+" Syntastic Support (Questioning using this)
+Plugin 'https://github.com/scrooloose/syntastic'
+
 set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatusLineFlag()}
 set statusline+=%*

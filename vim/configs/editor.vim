@@ -5,6 +5,7 @@ set nobackup
 set nowritebackup
 set modifiable
 set laststatus=2
+set hlsearch
 set incsearch
 set relativenumber
 set showmode

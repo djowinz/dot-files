@@ -40,3 +40,16 @@ nmap :sp :rightbelow sp<cr>
 nmap :bp :BufSurfBack<cr>
 nmap :bn :BufSurfForward<cr>
 
+" Just a quick toggle for syntax highlighting.... because HOLLAA!!!
+function! ToggleSyntax()
+   if exists("g:syntax_on")
+      syntax off
+	echo "AW ;_;"
+   else
+      syntax enable
+	echo "HOLLA <3"
+   endif
+endfunction
+
+" Silent mapp yooo.
+nmap <silent>  ;s  :call ToggleSyntax()<CR>

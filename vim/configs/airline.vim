@@ -1,3 +1,6 @@
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 let g:airline_powerline_fonts = 1
 let g:EasyMotion_leader_key = '<leader>'
 let g:Powerline_symbols = 'fancy'

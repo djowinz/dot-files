@@ -3,17 +3,6 @@ isInstalled() {
   command -v "$1" >/dev/null 2>&1 
 }
 
-sp="/-\|"
-sc=0
-spin() {
-  printf "\b${sp:sc++:1}"
-  ((sc==${#sp})) && sc=0
-}
-endspin() {
-  printf "\r%s\n" "$@"
-}
-
-spin
 # Reset
 Color_Off='\033[0m'       # Text Reset
 
@@ -216,7 +205,7 @@ fi
 printf "${BIPurple}Copying tokengen to correct place... ${Color_Off} \n\n"
 $(cp -R tokengen.sh /usr/local/bin)
 $(chmod 777 /usr/local/bin/tokengen.sh)
-endspin
+
 printf "${BICyan}Everything's all finished, items copied, ready to dev! ${Color_Off} \n\n"
 printf "${BIYellow}Don't forget to run \$(source ~/.zshrc) for ZSH changes to take effect! ${Color_Off} \n\n"
 

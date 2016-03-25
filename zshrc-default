@@ -1,0 +1,88 @@
+# Path to your oh-my-zsh installation.
+export LOCALHOST="localhost:3000"
+export ZSH="$PATH/djowinz/.oh-my-zsh"
+source ~/.antigen.zsh
+eval "$(rbenv init -)"
+setopt auto_cd
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle gitfast
+antigen bundle heroku
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting ##Syntax Highlighting
+antigen bundle StackExchange/blackbox ##GPG BlackBox Encryption Tool
+antigen bundle b4b4r07/emoji-cli ##Fun CLI emojis
+antigen bundle horosgrisa/mysql-colorize ##Mysql Table colorization
+antigen-bundle sharat87/pip-app ##PIP virtualenvs manager
+antigen bundle djui/alias-tips ##Alias Tips incase I forget
+
+# Load the theme.
+antigen theme bira ##Da best theme ever... period.
+
+# Vim Alias Support
+alias v='vim'
+alias vi='vim'
+alias vim='vim'
+
+# RSA Token Output
+alias token='/usr/local/bin/tokengen.sh'
+
+# Edit ZSH Quickly
+alias zshrc='vim ~/.zshrc'
+alias vimrc='vim ~/.vimrc'
+
+alias gpg_startup='gpg-agent --daemon --use-standard-socket'
+
+# Alias Support
+alias git='hub '
+alias glab='gitlab '
+alias sudo='sudo '
+alias refresh='source ~/.zshrc >/dev/null 2>&1'
+alias r='bundle exec rails'
+alias rake='bundle exec rake'
+alias guard='bundle exec guard'
+alias gtag='git tag -a '
+
+# Composer Aliases
+alias cp_d='composer dumpautoload'
+alias cp_u='composer update'
+alias cp_i='composer install'
+alias cp_r='composer require'
+alias cp_su='composer self-update'
+
+# Artisan Alias
+alias art='php artisan '
+
+# Tab name method
+function tabname {
+  echo -ne "\033]0;$*\007"
+}
+
+# Window name
+function winname {
+  echo -ne "\e]2;$1\a"
+}
+
+# CDPath
+cdpath=($HOME/Sites $HOME/Downloads $HOME/Desktop) 
+
+export PATH="$PATH:/usr/local/sbin" #Local sBin support
+export PATH="$PATH:/usr/local/bin" #Local Bin Support
+export GOPATH="$HOME/go" #Go Support
+export PATH="$PATH:$HOME/.composer/vendor/bin" #Composer Commands Support
+export PATH="$PATH:$GOROOT/bin:$GOPATH/bin" #Go Support
+export PATH="$PATH:/bin" #Global Bin Support
+export PATH="$PATH:/usr/bin" #Global Bin Support
+export PATH="$PATH:/usr/sbin" #Global sBin Support
+export PATH="$PATH:/opt/local/bin" #Opt Local Bin Support
+
+# Tell antigen that you're done.
+antigen apply

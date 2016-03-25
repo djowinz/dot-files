@@ -1,4 +1,5 @@
 #!/bin/bash
+[ "$UID" -eq 0 ] || exec gksu bash "$0" "$@"
 isInstalled() {
   command -v "$1" >/dev/null 2>&1 
 }
@@ -216,4 +217,4 @@ if ((${movedIntoPlace} < 1)); then
   fi
 fi
 
-printf "${BCyan}Everything is all finished, items copied, ready to dev! ${Color_Off} \n\n"
+printf "${BCyan}Everythingis all finished, items copied, ready to dev! ${Color_Off} \n\n"

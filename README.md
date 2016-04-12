@@ -1,5 +1,4 @@
 # Dot Files yeeeeee
-
 I basically had a setup that I loved, got a new computer than realized all setup stuff was on my other machine. I didn't want to port everything over so I built this little repo, it's not the greatest, but I'm happy with it and it does what it needs to. A lot of my inspiration for this came from [mathiasbynens/dotfiles] as well as [holman/dotfiles]. If you have time check those guys out, they both have amazing dot file configurations and hopefully mine will be as good as theirs! ♥
 
 ##### Use at your own risk!
@@ -14,7 +13,6 @@ The installation will walk you through a serious of questions and will even back
 I will eventually create a global installation for linux as well. This is only meant for max os x as it uses brew, but since I've found Linuxbrew to be almost exactly like Mac OS X's brew It should expidite this tremendously.
 
 ## Lastly...
-
 I really encourage feedback pull request, I want to make this better and I know it takes a village to raise a baby. Seeing how this baby is in it's infancy I look largely to people to give me constructive criticism and feedback. I haven't done everything perfect here, but it's my valiant attempt to simplify and streamline my setup.
 
 #### Todos

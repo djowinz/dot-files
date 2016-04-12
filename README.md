@@ -18,16 +18,16 @@ I will eventually create a global installation for linux as well. This is only m
 I really encourage feedback pull request, I want to make this better and I know it takes a village to raise a baby. Seeing how this baby is in it's infancy I look largely to people to give me constructive criticism and feedback. I haven't done everything perfect here, but it's my valiant attempt to simplify and streamline my setup.
 
 #### Todos
- - ##### Installation script(s)
-   - Implement system detection to determine which install script to use.
-   - Implement linux / BSD install script file.
-   - Seperate install functions commands into functions to simplify the script
-   - Improve back up detection so when running the script files aren't removed unintentionally unbeknownst to the user.
-   - Improve prompt sectinos, so that certian pieces can be either installed / not installed.
-- ##### Organization
-  - Make the directory structure more topical, so that each directory servers a single purpose. For one ensure that the zsh directory is solely responsible for zsh methods.
-  - Generate a .functions script on install that concatenates all function/*.bash files into one.
-  - Improve symlink system so that symlinks can be autocompiled at initialization.
+##### Installation script(s)
+ - Implement system detection to determine which install script to use.
+ - Implement linux / BSD install script file.
+ - Seperate install functions commands into functions to simplify the script
+ - Improve back up detection so when running the script files aren't removed unintentionally unbeknownst to the user.
+ - Improve prompt sectinos, so that certian pieces can be either installed / not installed.
+##### Organization
+ - Make the directory structure more topical, so that each directory servers a single purpose. For one ensure that the zsh directory is solely responsible for zsh methods.
+ - Generate a .functions script on install that concatenates all function/*.bash files into one.
+ - Improve symlink system so that symlinks can be autocompiled at initialization.
 
 ##### All Tech / Tools Installed Listed:
  - [Brew]

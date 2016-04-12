@@ -28,6 +28,8 @@ set autowrite
 set mouse=a
 set showcmd
 
+filetype plugin indent on
+
 " Color Scheme
 set background=dark
 colorscheme onedark

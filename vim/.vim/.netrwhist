@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/djowinz/Sites/moonlight/vendor/guzzle/guzzle/src/Guzzle/Plugin'
-let g:netrw_dirhist_2='/Users/djowinz/Sites/moonlight/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie'
-let g:netrw_dirhist_3='/Users/djowinz/Sites/moonlight/vendor/guzzle/guzzle/src/Guzzle/Plugin/Cookie/CookieJar'

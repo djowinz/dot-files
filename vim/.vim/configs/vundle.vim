@@ -1,1 +1,0 @@
-Plugin 'VundleVim/Vundle.vim'

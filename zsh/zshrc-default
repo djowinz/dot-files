@@ -5,27 +5,45 @@ source ~/.antigen.zsh
 eval "$(rbenv init -)"
 setopt auto_cd
 
+# opam support
+. $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
-antigen bundle gitfast
 antigen bundle heroku
 antigen bundle pip
 antigen bundle lein
 antigen bundle command-not-found
+antigen bundle autojump
+antigen bundle brew
+antigen bundle common-aliases
+antigen bundle compleat
+antigen bundle git-extras
+antigen bundle git-flow
+antigen bundle npm
+antigen bundle osx
+antigen bundle web-search
+antigen bundle z
+antigen bundle gitfast
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting ##Syntax Highlighting
+antigen bundle zsh-users/zsh-history-substring-search ./zsh-history-substring-search.zsh #Sub String
+antigen bundle tarruda/zsh-autosuggestions #ZSH Auto suggestion stuff
 antigen bundle StackExchange/blackbox ##GPG BlackBox Encryption Tool
 antigen bundle b4b4r07/emoji-cli ##Fun CLI emojis
 antigen bundle horosgrisa/mysql-colorize ##Mysql Table colorization
-antigen-bundle sharat87/pip-app ##PIP virtualenvs manager
+antigen bundle sharat87/pip-app ##PIP virtualenvs manager
 antigen bundle djui/alias-tips ##Alias Tips incase I forget
 
 # Load the theme.
-antigen theme bira ##Da best theme ever... period.
+antigen-theme djowinz ##Da best theme ever... period.
+
+# Setup zsh-autosuggestions
+zle -N zle-line-init
 
 # Vim Alias Support
 alias v='vim'
@@ -39,16 +57,28 @@ alias token='/usr/local/bin/tokengen.sh'
 alias zshrc='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
 
-alias gpg_startup='gpg-agent --daemon --use-standard-socket'
+# Ngrok Speciality
+alias ngrok_moon='ngrok http -subdomain=moonlight 80'
+alias ngrok_ax='ngrok http -subdomain=activex 80'
+
+# Homestead alias
+alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
 
 # Alias Support
 alias git='hub '
 alias glab='gitlab '
 alias sudo='sudo '
-alias refresh='source ~/.zshrc >/dev/null 2>&1'
+alias refresh='source ~/.zshrc'
+alias activex_zeus='ssh root@10.119.42.225'
+alias activex_apollo="ssh root@10.119.159.166"
+alias activex_hera="ssh root@10.119.159.167"
+#alias moonlight_apollo="sshpass -p '${moonlight_password}' ssh verys@10.119.159.121"
+#alias moonlight_hera="sshpass -p '${moonlight_password}' ssh verys@10.119.159.122"
+alias moonlight_apollo='ssh root@10.119.159.121'
+alias moonlight_hera='ssh root@10.119.159.122'
 alias r='bundle exec rails'
 alias rake='bundle exec rake'
-alias guard='bundle exec guard'
+#alias guard='bundle exec guard'
 alias gtag='git tag -a '
 
 # Composer Aliases
@@ -71,18 +101,30 @@ function winname {
   echo -ne "\e]2;$1\a"
 }
 
-# CDPath
-cdpath=($HOME/Sites $HOME/Downloads $HOME/Desktop) 
+function process_search() {
+  echo $i
+}
 
-export PATH="$PATH:/usr/local/sbin" #Local sBin support
+# CDPath
+cdpath=($HOME/Sites $HOME/Games $HOME/Desktop) 
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=243
+bindkey '^ ' autosuggest-accept
+
 export PATH="$PATH:/usr/local/bin" #Local Bin Support
-export GOPATH="$HOME/go" #Go Support
+export PATH="$PATH:/usr/local/sbin" #Local sBin support
+export PATH="$PATH:/usr/local/share/npm/bin" #Npm support
+export PATH="$PATH:/usr/local/git/bin" #Git Support
+export PATH="$PATH:/Users/djowinz/jars" #Jars Support
+export PATH="$PATH:/Users/djowinz/bin" #User created Bin Support
+export PATH="$PATH:/usr/local/Cellar/python/2.7.11/bin"
 export PATH="$PATH:$HOME/.composer/vendor/bin" #Composer Commands Support
+export GOPATH="$HOME/go" #Go Support
 export PATH="$PATH:$GOROOT/bin:$GOPATH/bin" #Go Support
-export PATH="$PATH:/bin" #Global Bin Support
 export PATH="$PATH:/usr/bin" #Global Bin Support
 export PATH="$PATH:/usr/sbin" #Global sBin Support
-export PATH="$PATH:/opt/local/bin" #Opt Local Bin Support
+export NVM_DIR="/Users/djowinz/.nvm" #NVM Support
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Tell antigen that you're done.
 antigen apply

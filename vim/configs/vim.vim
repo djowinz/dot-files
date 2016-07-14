@@ -44,10 +44,10 @@ nmap :bn :BufSurfForward<cr>
 function! ToggleSyntax()
    if exists("g:syntax_on")
       syntax off
-	echo "AW ;_;"
+      echo "AW ;_;"
    else
       syntax enable
-	echo "HOLLA <3"
+      echo "HOLLA <3"
    endif
 endfunction
 

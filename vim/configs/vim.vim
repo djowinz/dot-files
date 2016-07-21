@@ -33,9 +33,11 @@ nmap <C-t> :tabe<cr>
 nmap <leader>] :tabn<cr>
 nmap <leader>[ :tabp<cr>
 
+map <leader>' :cn<cr>
+map <leader>; :cp<cr>
+
 nnoremap <leader>me :split $MYVIMRC<cr>
 
-nmap ,c :!open -a Google\ Chrome<cr>
 nmap :sp :rightbelow sp<cr>
 nmap :bp :BufSurfBack<cr>
 nmap :bn :BufSurfForward<cr>
@@ -50,6 +52,10 @@ function! ToggleSyntax()
       echo "HOLLA <3"
    endif
 endfunction
+
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
 
 " Silent mapp yooo.
 nmap <silent>  ;s  :call ToggleSyntax()<CR>

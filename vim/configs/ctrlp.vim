@@ -9,4 +9,5 @@ endif
 set wildignore+=*/vendor/**
 set wildignore+=*/public/forum/**
 set wildignore+=*/vendor/**
-set wildignore+=*/node_modules/**
+
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'

@@ -1,1 +1,0 @@
-Plugin 'sheerun/vim-polyglot'

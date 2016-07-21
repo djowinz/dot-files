@@ -4,7 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-let excludes = ["powerline.vim", "youcompleteme.vim", "syntastic.vim"]
+let excludes = ["powerline.vim"]
 
 for f in split(glob('~/.vim/configs/*.vim'), '\n')
 	let path = split(f, "/")

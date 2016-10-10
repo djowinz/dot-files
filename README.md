@@ -4,7 +4,7 @@ I basically had a setup that I loved, got a new computer than realized all setup
 ##### Use at your own risk!
 To install everything:
 ```sh
-git clone git@github.com:djowinz/dot-files.get && cd dot-files
+git clone git@github.com:djowinz/dot-files.git && cd dot-files
 chmod a+x scripts/install.sh && scripts/install.sh
 ```
 
